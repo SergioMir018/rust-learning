@@ -1,5 +1,6 @@
 fn main() {
     println!("Hello, world!");
 
-    let a = "red";
+    // Declaration of a variable
+    let my_color = "red";
 }
