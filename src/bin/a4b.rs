@@ -18,7 +18,7 @@ fn is_listed(num: i32) {
 }
 
 fn main() {
-    let number: i32 = 1;
+    let number: i32 = 5;
 
     is_listed(number);
 }
