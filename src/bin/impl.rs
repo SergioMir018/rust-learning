@@ -3,7 +3,7 @@ struct Temperature {
 }
 
 fn show_temp(temp: Temperature) {
-    pritnln!("{:?} dregrees F", temp.degree_f)
+    println!("{:?} dregrees F", temp.degree_f)
 }
 
 fn main() {
