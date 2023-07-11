@@ -29,7 +29,7 @@ impl std::fmt::Display for Flavors {
 
 struct Drink {
     flavor: Flavors,
-    fluid_ounces: i32
+    fluid_ounces: f64
 }
 
 fn match_drink(drink: Drink) {
