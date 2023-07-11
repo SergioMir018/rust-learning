@@ -3,13 +3,21 @@ struct Temperature {
 }
 
 impl Temperature {
-    fn show_temp(temp: Temperature) {
-        println!("{:?} dregrees F", temp.degree_f)
+    fn frezzing() -> Self {
+        Self {
+            degree_f: 32.4
+        }
+    }
+
+    fn show_temp(&self) {
+        println!("{:?} dregrees F", self.degree_f)
     }
 }
 
 fn main() {
     let hot = Temperature { degree_f: 99.9 };
+    let cold = Temperature::frezzing();
 
-    Temperature::show_temp(hot);
+    hot.show_temp();
+    cold.show_temp();
 }
