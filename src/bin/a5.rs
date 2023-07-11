@@ -13,7 +13,7 @@ fn main() {
     let mut num: i32 = 1;
 
     loop {
-        print!("{}", num);
+        print!("{} ", num);
         num += 1;
 
         if num == 5 {
