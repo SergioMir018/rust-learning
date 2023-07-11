@@ -11,7 +11,7 @@ fn main() {
         height: 5,
     };
 
-    let tall: i32 = my_box.height;
-
-    print!("{:?}", tall);
+    println!("depth: {:?}", my_box.depth);
+    println!("width: {:?}", my_box.width);
+    println!("height: {:?}", my_box.height);
 }
