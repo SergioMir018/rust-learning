@@ -45,19 +45,19 @@ fn match_drink(drink: Drink) {
 fn main() {
     let drink1: Drink = Drink {
         flavor: Flavors::Banana,
-        fluid_ounces: 70
+        fluid_ounces: 70.0
     };
     let drink2: Drink = Drink {
         flavor: Flavors::Mango,
-        fluid_ounces: 89
+        fluid_ounces: 89.0
     };
     let drink3: Drink = Drink {
         flavor: Flavors::Chocolate,
-        fluid_ounces: 100
+        fluid_ounces: 100.0
     };
     let drink4: Drink = Drink {
         flavor: Flavors::Strawberry,
-        fluid_ounces: 60
+        fluid_ounces: 60.0
     };
 
     match_drink(drink1);
