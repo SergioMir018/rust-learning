@@ -72,7 +72,10 @@ impl ShippingBox {
 }
 
 fn main() {
-    let my_box = ShippingBox::new_regular_box(40.5, Color::Red, Dimensions::new_dimensions(30,20,30));
+    let my_box = ShippingBox::new_regular_box(
+        40.5, Color::Red, 
+        Dimensions::new_dimensions(30,20,30)
+    );
 
     my_box.show_characteristics();
 }
