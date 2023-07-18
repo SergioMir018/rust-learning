@@ -11,6 +11,7 @@
 // * Use an if expression to determine which person's info should be printed
 // * The name and colors should be printed using a function
 
+use rayon::prelude::*;
 struct Person {
   name: String,
   age: i8,
@@ -28,7 +29,7 @@ impl Person {
 }
 
 fn print_under_10(persons: Vec<Person>) {
-persons.iter()
+persons.par_iter()
   .filter(|person| person.age < 10)
   .for_each(|person| {
     println!("{} is {}", person.name, person.favorite_color);

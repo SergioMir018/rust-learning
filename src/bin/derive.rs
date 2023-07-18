@@ -1,7 +1,7 @@
 /*
 * With derive you can use the `Clone` and `Copy` traits to avoid ownership.
 * This traits will instead create a new instance of whatever you use it on when * it's passed to a new scope.
-* 
+*
 * Example:
 * #[derive(Clone, Copy)]
 * struct MyStruct {}
