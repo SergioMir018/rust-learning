@@ -29,7 +29,6 @@ impl Ticket {
     }
 }
 
-
 fn main() {
     let spectators = vec![
         Ticket::Standard(50),
