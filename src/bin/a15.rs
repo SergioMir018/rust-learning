@@ -8,16 +8,20 @@
 // * Use a struct containing the student's name and locker assignment
 // * The locker assignment should use an optional data
 
+/// Represents a student
 struct Student {
     name: String,
     locker: Option<i16>,
 }
 
+/// Implementation of the `Student` struct
 impl Student {
+    /// Creates a new `Student`
     fn new(name: String, locker: Option<i16>) -> Self {
         Self { name, locker }
     }
 
+    /// Display the details of a student
     fn student_info(self) {
         println!("name: {}", self.name);
 
