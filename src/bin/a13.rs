@@ -1,5 +1,5 @@
 // Topic: String
-// 
+//
 // Program requirements:
 // * Print out the name and favorite colors of people aged 10 and under
 //
@@ -13,31 +13,32 @@
 
 use rayon::prelude::*;
 struct Person {
-  name: String,
-  age: i8,
-  favorite_color: String
+    name: String,
+    age: i8,
+    favorite_color: String,
 }
 
 impl Person {
-  fn new(name: String, age: i8, favorite_color: String) -> Self {
-    Self { 
-      name, 
-      age, 
-      favorite_color
+    fn new(name: String, age: i8, favorite_color: String) -> Self {
+        Self {
+            name,
+            age,
+            favorite_color,
+        }
     }
-  }
 }
 
 fn print_under_10(persons: Vec<Person>) {
-persons.par_iter()
-  .filter(|person| person.age < 10)
-  .for_each(|person| {
-    println!("{} is {}", person.name, person.favorite_color);
-  });
+    persons
+        .par_iter()
+        .filter(|person| person.age < 10)
+        .for_each(|person| {
+            println!("{} is {}", person.name, person.favorite_color);
+        });
 }
 
 fn main() {
-  let persons = vec![
+    let persons = vec![
         Person::new(String::from("John"), 13, String::from("red")),
         Person::new(String::from("Jessica"), 45, String::from("purple")),
         Person::new(String::from("Arnold"), 4, String::from("grey")),
