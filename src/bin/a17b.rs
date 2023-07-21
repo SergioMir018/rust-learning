@@ -22,7 +22,7 @@
 enum ProtectedLocation {
     All,
     Office,
-    Warehouse
+    Warehouse,
 }
 
 impl ProtectedLocation {
@@ -48,7 +48,7 @@ impl Database {
             "Anita" => Ok(Employee::new("Anita")),
             "Brody" => Ok(Employee::new("Brody")),
             "Catherine" => Ok(Employee::new("Catherine")),
-            _ => Err(String::from("employee nor found"))
+            _ => Err(String::from("employee nor found")),
         }
     }
 
@@ -56,25 +56,27 @@ impl Database {
         match employee.name.as_str() {
             "Anita" => Ok(Keycard::new(1000)),
             "Brody" => Ok(Keycard::new(500)),
-            other => Err(format!("{other} doesn't have a keycard"))
+            other => Err(format!("{other} doesn't have a keycard")),
         }
     }
 }
 
 #[derive(Clone, Debug)]
 struct Employee {
-    name: String
+    name: String,
 }
 
 impl Employee {
     fn new(name: &str) -> Self {
-        Self { name: String::from(name) }
+        Self {
+            name: String::from(name),
+        }
     }
 }
 
 #[derive(Debug)]
 struct Keycard {
-    access_level: u16
+    access_level: u16,
 }
 
 impl Keycard {
@@ -86,7 +88,7 @@ impl Keycard {
 #[derive(Clone, Copy, Debug)]
 enum AuthorizationStatus {
     Allow,
-    Deny
+    Deny,
 }
 
 fn authorize(
